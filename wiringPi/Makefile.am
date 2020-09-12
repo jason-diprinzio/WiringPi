@@ -1,0 +1,5 @@
+lib_LTLIBRARIES = libwiringPi.la
+libwiringPi_la_SOURCES = ads1115.c ads1115.h bmp180.c bmp180.h drcNet.c drcNet.h drcSerial.c drcSerial.h ds18b20.c ds18b20.h htu21d.c htu21d.h Makefile.am Makefile.sav max31855.c max31855.h max5322.c max5322.h mcp23008.c mcp23008.h mcp23016.c mcp23016.h mcp23016reg.h mcp23017.c mcp23017.h mcp23s08.c mcp23s08.h mcp23s17.c mcp23s17.h mcp23x0817.h mcp23x08.h mcp3002.c mcp3002.h mcp3004.c mcp3004.h mcp3422.c mcp3422.h mcp4802.c mcp4802.h noMoreStatic pcf8574.c pcf8574.h pcf8591.c pcf8591.h piHiPri.c piThread.c pseudoPins.c pseudoPins.h rht03.c rht03.h sn3218.c sn3218.h softPwm.c softPwm.h softServo.c softServo.h softTone.c softTone.h sr595.c sr595.h wiringPi.c wiringPiI2C.c wiringPiI2C.h wiringPiSPI.c wiringPiSPI.h wiringSerial.c wiringSerial.h wiringShift.c wiringShift.h wpiExtensions.c wpiExtensions.h
+libwiringPi_la_HEADERS = wiringPi.h
+libwiringPi_ladir = ${includedir}
+libwiringPi_la_CPPFLAGS = -Wall -Wextra -I ../wiringPiD -D_GNU_SOURCE -Wformat=2 -Wall -Wextra -Winline -pipe -fPIC     

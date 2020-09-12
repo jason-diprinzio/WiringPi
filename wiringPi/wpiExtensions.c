@@ -56,7 +56,7 @@
 #include "sn3218.h"
 #include "drcSerial.h"
 #include "drcNet.h"
-#include "../wiringPiD/drcNetCmd.h"
+//#include "../wiringPiD/drcNetCmd.h"
 #include "pseudoPins.h"
 #include "bmp180.h"
 #include "htu21d.h"
@@ -806,8 +806,8 @@ static int doExtensionDrcNet (char *progName, int pinBase, char *params)
 
   if (strlen (port) == 0)
   {
-    sprintf (pPort, "%d", DEFAULT_SERVER_PORT) ;
-    port = pPort ;
+    verbError ("%s: port required", progName);
+    return FALSE ;
   }
 
   if ((params = extractStr (progName, params, &password)) == NULL)
